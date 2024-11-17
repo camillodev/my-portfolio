@@ -1,4 +1,5 @@
-import { Button } from '@mui/material';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 import React from 'react';
 import Image from 'next/image';
 
@@ -21,23 +22,22 @@ const Banner: React.FC = ({}) => {
               Crafting high-performance web applications with a focus on user
               experience.
             </p>
-            <div className='flex gap-5 justify-start'>
-              <Button variant='contained' color='primary'>
-                Primary
+            <Stack direction='row' spacing={2}>
+              <Button color='secondary'>Secondary</Button>
+              <Button variant='contained' color='success'>
+                Success
               </Button>
-              <Button variant='contained'>Contained</Button>
-              <Button variant='outlined' color='primary'>
-                Primary Outlined
+              <Button variant='outlined' color='error'>
+                Error
               </Button>
-              <Button sx={{ backgroundColor: 'red' }}>Teste</Button>
-            </div>
+            </Stack>
           </div>
           <div className='w-full'>
             <Image
               src='/rafael.png'
               alt='Rafael Camillo smilling'
               width={500}
-              height={200}
+              height={500}
             />
           </div>
         </div>
