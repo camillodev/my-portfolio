@@ -49,15 +49,17 @@ const NavBar = () => {
 
   console.log('pathname: ', pathname);
 
-  const toggleDrawer = (open) => (event) => {
-    if (
-      event.type === 'keydown' &&
-      (event.key === 'Tab' || event.key === 'Shift')
-    ) {
-      return;
-    }
-    setDrawerOpen(open);
-  };
+  const toggleDrawer =
+    (open: boolean | ((prevState: boolean) => boolean)) =>
+    (event: { type: string; key: string }) => {
+      if (
+        event.type === 'keydown' &&
+        (event.key === 'Tab' || event.key === 'Shift')
+      ) {
+        return;
+      }
+      setDrawerOpen(open);
+    };
 
   return (
     <AppBar
