@@ -4,6 +4,7 @@ import Header from './components/Header';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme';
+import Footer from './components/Footer';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -26,9 +27,7 @@ export default function RootLayout({
             <ThemeProvider theme={theme}>{children}</ThemeProvider>
           </AppRouterCacheProvider>
         </main>
-        <footer>
-          <p>Todos os direitos reservados</p>
-        </footer>
+        <Footer />
       </body>
     </html>
   );
