@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { client } from '../utils/contentful';
 import Image from 'next/image';
 import PostCard from './PostCard';
+import { Button } from '@mui/material';
 
 const LatestBlog: React.FC = ({}) => {
   const [posts, setPosts] = useState([]);
@@ -21,7 +22,15 @@ const LatestBlog: React.FC = ({}) => {
 
   return (
     <div className='container mx-auto px-10 my-5'>
-      <h1>Recent Blog Post</h1>
+      <div className='flex justify-between align-center'>
+        <h1>Recent Blog Post</h1>
+        <Button
+          variant='outlined'
+          className='py-3 px-6 font-bold 2xl:text-xl rounded-3xl'
+        >
+          See all Posts
+        </Button>
+      </div>
       <div className='flex flex-col lg:flex-row gap-10 py-5'>
         <div className='basis-1/2'>
           <div className='blog w-full'>
