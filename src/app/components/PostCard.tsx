@@ -1,36 +1,61 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { Entry } from 'contentful';
-import Link from 'next/link';
+import Image from 'next/image';
 
 interface PostProps {
-  post: Entry<any>;
+  title: string;
+  image: any;
+  tags: string;
+  isHorizontal?: boolean;
 }
 
-const PostCard: React.FC<PostProps> = ({ post }) => {
-  const { title, slug, content, image } = post.fields;
-
-  return (
-    <div className='bg-white shadow-md rounded-lg overflow-hidden'>
-      {image && (
-        <img
-          src={image.fields.file.url}
-          alt={title}
-          className='w-full h-48 object-cover'
-        />
-      )}
-      <div className='p-4'>
-        <h2 className='text-xl font-bold mb-2'>{title}</h2>
-        <div className='prose'>{documentToReactComponents(content)}</div>
-        <Link
-          href={`/blog/${slug}`}
-          className='mt-4 inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
-        >
-          Read more
-        </Link>
+const PostCard: React.FC<PostProps> = ({
+  title,
+  image,
+  tags,
+  isHorizontal = false,
+}) => {
+  if (isHorizontal) {
+    return (
+      <div className='post lg:flex gap-6'>
+        <div className='relative w-full h-60 rounded-lg aspect-video lg:w-3/6 lg:h-48 '>
+          <Image
+            src={`https:${image.fields.file.url}`}
+            alt={title}
+            fill
+            className='rounded-lg object-cover'
+            sizes='(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw'
+          />
+        </div>
+        <div className='description pt-4 lg:pt-1'>
+          <p className='text-primary  font-bold'>
+            {tags ? tags.toUpperCase() : ''}
+          </p>
+          <h1 className='text-2xl pt-2'>{title}</h1>
+        </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return (
+      <div className='post'>
+        {image && (
+          <div className='relative w-full h-60 lg:h-80 rounded-lg'>
+            <Image
+              src={`https:${image.fields.file.url}`}
+              alt={image.fields.title}
+              fill
+              className='rounded-lg object-cover'
+              sizes='(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw'
+            />
+          </div>
+        )}
+        <p className='text-primary pt-4 pl-1 font-bold'>
+          {tags ? tags.toUpperCase() : ''}
+        </p>
+        <h1 className='text-3xl pl-1 pt-2'>{title}</h1>
+      </div>
+    );
+  }
 };
 
 export default PostCard;

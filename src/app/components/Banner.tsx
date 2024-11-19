@@ -38,11 +38,12 @@ const Banner: React.FC = ({}) => {
           </div>
           <div className='w-full mb-[-4px] hidden md:block aspect-w-1 aspect-h-1'>
             <Image
-              src='/rafael.png'
+              src='/banner.png'
               alt='Rafael Camillo smilling'
-              width={800}
-              height={500}
-              className='opacity-90  object-cover w-full lg:h-full'
+              width={400}
+              height={300}
+              className='object-cover w-full h-full'
+              sizes='(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw'
             />
           </div>
         </div>
