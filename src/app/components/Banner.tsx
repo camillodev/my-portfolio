@@ -36,15 +36,13 @@ const Banner: React.FC = ({}) => {
               </Button>
             </div>
           </div>
-          <div className='w-full mb-[-4px] hidden md:block'>
+          <div className='w-full mb-[-4px] hidden md:block aspect-w-1 aspect-h-1'>
             <Image
               src='/rafael.png'
               alt='Rafael Camillo smilling'
-              width={900}
-              height={900}
-              layout='responsive'
-              objectFit='contain'
-              className='opacity-90'
+              width={800}
+              height={500}
+              className='opacity-90  object-cover w-full lg:h-full'
             />
           </div>
         </div>
