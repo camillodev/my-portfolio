@@ -24,13 +24,13 @@ const Banner: React.FC = ({}) => {
             <div className='flex flex-col lg:flex-row gap-4 pb-2 justify-start pt-5 lg:pt-10 w-full'>
               <Button
                 variant='contained'
-                className='py-3 px-6 font-bold 2xl:text-xl'
+                className='py-3 px-6 font-bold 2xl:text-xl rounded-3xl'
               >
                 Explore My Profile
               </Button>
               <Button
                 variant='outlined'
-                className='py-3 px-6 font-bold 2xl:text-xl'
+                className='py-3 px-6 font-bold 2xl:text-xl rounded-3xl'
               >
                 Visit Blog
               </Button>

@@ -21,9 +21,9 @@ const LatestBlog: React.FC = ({}) => {
   const thirdPost = posts.at(2) ?? posts.at(2);
 
   return (
-    <div className='container mx-auto px-10 my-5'>
-      <div className='flex justify-between align-center'>
-        <h1>Recent Blog Post</h1>
+    <div className='container mx-auto px-10 my-20'>
+      <div className='flex justify-between mb-5'>
+        <h1 className='text-4xl mt-2'>Recent Blog Post</h1>
         <Button
           variant='outlined'
           className='py-3 px-6 font-bold 2xl:text-xl rounded-3xl'
