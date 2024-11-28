@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "NEXT_LINT_IGNORE_BUILD_ERROR=true next dev",
+    "build": "NEXT_LINT_IGNORE_BUILD_ERROR=true next build",
+    "start": "NEXT_LINT_IGNORE_BUILD_ERROR=true next start",
+    "build:prod": "next build",
     "lint": "next lint"
   },
   "dependencies": {

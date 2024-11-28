@@ -38,7 +38,7 @@ const Banner: React.FC = ({}) => {
           </div>
           <div className='w-full mb-[-4px] hidden md:block aspect-w-1 aspect-h-1'>
             <Image
-              src='/banner.png'
+              src='/banner.svg'
               alt='Rafael Camillo smilling'
               width={400}
               height={300}
