@@ -28,7 +28,7 @@ const LatestBlog: React.FC = ({}) => {
           variant='outlined'
           className='py-3 px-6 font-bold 2xl:text-xl rounded-3xl'
         >
-          See all Posts
+          See all <span className='hidden md:inline ml-2'> Posts</span>
         </Button>
       </div>
       <div className='flex flex-col lg:flex-row gap-10 py-5'>

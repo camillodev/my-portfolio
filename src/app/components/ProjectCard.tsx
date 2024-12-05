@@ -21,21 +21,21 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   const { title, slug, imageCover } = project;
 
   return (
-    <div className='shadow-md rounded-lg overflow-hidden w-full h-96 flex flex-col'>
+    <div className='shadow-mdx rounded-lg overflow-hidden w-full h-full min-h-96'>
       <a
         href={`/projects/${slug}`}
         target='_blank'
         rel='noopener noreferrer'
-        className='inline-block no-underline'
+        className='inline-block no-underline w-full h-full'
       >
         {imageCover && (
-          <div className='relative'>
+          <div className='relative h-full'>
             <Image
               src={'https://' + imageCover.fields.file.url}
               alt={title}
-              width={400}
-              height={300}
-              className='object-cover bg-white w-full h-96 '
+              width={300}
+              height={200}
+              className='object-cover w-full h-full min-h-96'
               sizes='(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw'
             />
             <h2 className='absolute inset-0 flex items-center justify-center text-4xl font-bold text-primary bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100'>
