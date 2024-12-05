@@ -5,7 +5,7 @@ import Image from 'next/image';
 const Banner: React.FC = ({}) => {
   return (
     <>
-      <section className='w-full bg-surface-primary px-10  py-5 md:pb-0'>
+      <section className='w-full bg-surface-primary py-5 md:pb-0'>
         <div className='mx-auto  flex flex-col md:flex-row w-full  gap-6  justify-between items-center'>
           <div className='flex w-full flex-col justify-start text-left '>
             <h1 className='max-w-[800px] text-xl  2xl:text-4xl font-medium  text-white hidden md:block'>
@@ -38,7 +38,7 @@ const Banner: React.FC = ({}) => {
           </div>
           <div className='w-full mb-[-4px] hidden md:block aspect-w-1 aspect-h-1'>
             <Image
-              src='/banner.svg'
+              src='/pic.svg'
               alt='Rafael Camillo smilling'
               width={400}
               height={300}

@@ -9,7 +9,7 @@ import { client } from './utils/contentful';
 
 export default function Home() {
   return (
-    <div className='homezx'>
+    <div className='container mx-auto px-10'>
       <Banner />
       {/* <Divider
         variant='fullWidth'

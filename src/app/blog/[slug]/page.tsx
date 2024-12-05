@@ -4,9 +4,8 @@ import { notFound } from 'next/navigation';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { client } from '../../utils/contentful';
 import Footer from '../../components/Footer';
-import Header from '../../components/Header';
 
-async function getPost(slug) {
+async function getPost(slug: string) {
   const entries = await client.getEntries({
     content_type: 'post',
     'fields.slug': slug,
