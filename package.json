@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "NEXT_LINT_IGNORE_BUILD_ERROR=true next dev",
-    "build": "NEXT_LINT_IGNORE_BUILD_ERROR=true next build",
-    "start": "NEXT_LINT_IGNORE_BUILD_ERROR=true next start",
-    "build:prod": "next build",
-    "lint": "next lint"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "npx tsc"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^16.0.0",
