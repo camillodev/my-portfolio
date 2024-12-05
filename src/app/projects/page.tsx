@@ -29,7 +29,7 @@ const Projects: React.FC = () => {
   }
   return (
     <div className='container mx-auto px-10 pt-10'>
-      <h1 className='text-3xl font-bold mb-8'>Meus Projetos x</h1>
+      <h1 className='text-3xl font-bold mb-8'>Meus Projetos</h1>
 
       <div className='flex flex-col mb-10 w-full h-96 md:h-[500px]'>
         <ProjectCard key={projects[0].sys.id} project={projects[0].fields} />

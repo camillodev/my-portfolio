@@ -37,9 +37,9 @@ const PostCard: React.FC<PostProps> = ({
     );
   } else {
     return (
-      <div className='post'>
+      <div className='post h-full'>
         {image && (
-          <div className='relative w-full h-60 lg:h-80 rounded-lg'>
+          <div className='relative w-full h-4/6 rounded-lg'>
             <Image
               src={`https:${image.fields.file.url}`}
               alt={image.fields.title}
@@ -49,10 +49,10 @@ const PostCard: React.FC<PostProps> = ({
             />
           </div>
         )}
-        <p className='text-primary pt-4 pl-1 font-bold'>
+        <p className='text-primary pt-4 pl-1 font-bold text-sm md:text-base'>
           {tags ? tags.toUpperCase() : ''}
         </p>
-        <h1 className='text-3xl pl-1 pt-2'>{title}</h1>
+        <h1 className='text-xl md:text-3xl pl-1 pt-2 line-clamp-2'>{title}</h1>
       </div>
     );
   }
