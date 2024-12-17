@@ -1,8 +1,10 @@
 import { Button } from '@mui/material';
 import React from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 const Banner: React.FC = ({}) => {
+  const router = useRouter();
   return (
     <>
       <section className='w-full bg-surface-primary py-5 md:pb-0'>
@@ -25,12 +27,14 @@ const Banner: React.FC = ({}) => {
               <Button
                 variant='contained'
                 className='py-3 px-6 font-bold 2xl:text-xl rounded-3xl'
+                onClick={() => router.push('/about')}
               >
                 Explore My Profile
               </Button>
               <Button
                 variant='outlined'
                 className='py-3 px-6 font-bold 2xl:text-xl rounded-3xl'
+                onClick={() => router.push('/blog')}
               >
                 Visit Blog
               </Button>

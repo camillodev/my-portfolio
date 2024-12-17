@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { client } from '../utils/contentful';
-import Image from 'next/image';
 import PostCard from './PostCard';
 import { Button } from '@mui/material';
-import ProjectCard from './ProjectCard';
+import { useRouter } from 'next/navigation';
 
 const LatestBlog: React.FC = ({}) => {
+  const router = useRouter();
+
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -19,6 +20,10 @@ const LatestBlog: React.FC = ({}) => {
 
   const firstPost = posts.at(0) ?? posts.at(0);
 
+  const goToBlogsPage = () => {
+    router.push('/blog');
+  };
+
   return (
     <section className='latest-blog my-10 h-[850px] md:h-[550px]'>
       <div className='section-header flex justify-between mb-5'>
@@ -26,6 +31,7 @@ const LatestBlog: React.FC = ({}) => {
         <Button
           variant='outlined'
           className='py-3 px-6 font-bold 2xl:text-xl rounded-3xl'
+          onClick={goToBlogsPage}
         >
           See all <span className='hidden md:inline ml-2'> Posts</span>
         </Button>

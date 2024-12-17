@@ -47,8 +47,6 @@ const NavBar = () => {
   const isMobile = useMediaQuery('(max-width: 600px)');
   const pathname = usePathname();
 
-  console.log('pathname: ', pathname);
-
   const toggleDrawer =
     (open: boolean | ((prevState: boolean) => boolean)) =>
     (event: { type: string; key: string }) => {
@@ -81,8 +79,10 @@ const NavBar = () => {
             <MenuIcon />
           </IconButton>
         )}
-        <Typography variant='h6' className='font-bold'>
-          Rafael Camillo
+        <Typography variant='h6' className='font-bold cursor-pointer'>
+          <Link href='/' className='text-inherit no-underline'>
+            Rafael Camillo
+          </Link>
         </Typography>
         <div className='ml-auto flex gap-4'>
           {isMobile ? ( // Renderizar o menu no Drawer para mobile

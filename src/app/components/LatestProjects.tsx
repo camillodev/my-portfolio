@@ -3,10 +3,13 @@ import React, { useEffect, useState } from 'react';
 import { client } from '../utils/contentful';
 import ProjectCard from './ProjectCard';
 import { Button } from '@mui/material';
+import { useRouter } from 'next/navigation';
 
 const LatestProjects: React.FC = () => {
+  const router = useRouter();
   const [projects, setProjects] = useState<unknown[]>([]);
   const [loading, setLoading] = useState(true);
+
   const fetchProjects = async () => {
     try {
       const response = await client.getEntries({
@@ -31,12 +34,12 @@ const LatestProjects: React.FC = () => {
   }
 
   const goToProjectsPage = () => {
-    // router.push('/projects');
+    router.push('/projects');
   };
 
   return (
     <section className='latest-projects'>
-      <div className=' section-header flex justify-between mb-5'>
+      <div className='section-header flex justify-between mb-5'>
         <h1 className='text-4xl mt-2'>Latest Projects</h1>
         <Button
           variant='outlined'
