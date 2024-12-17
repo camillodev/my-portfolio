@@ -21,7 +21,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   const { title, slug, imageCover } = project;
 
   return (
-    <div className='shadow-mdx rounded-lg overflow-hidden w-full h-full min-h-96'>
+    <div className='shadow-mdx rounded-lg overflow-hidden w-full h-60'>
       <a
         href={`/projects/${slug}`}
         target='_blank'
@@ -35,7 +35,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
               alt={title}
               width={300}
               height={200}
-              className='object-cover w-full h-full min-h-96'
+              className='object-cover w-full h-full '
               sizes='(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw'
             />
             <h2 className='absolute inset-0 flex items-center justify-center text-4xl font-bold text-primary bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100'>

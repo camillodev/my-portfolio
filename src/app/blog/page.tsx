@@ -31,11 +31,7 @@ const Blog: React.FC = () => {
   return (
     <div className='container mx-auto px-10 pt-10'>
       <div className='flex flex-col mb-10 w-full h-96 md:max-h-[540px] '>
-        <PostCard
-          title={posts[0].fields.title}
-          image={posts[0].fields.image}
-          tags={posts[0].fields.tags}
-        />
+        <PostCard post={posts[0].fields} />
       </div>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
         {posts.length > 1 &&
@@ -44,11 +40,7 @@ const Blog: React.FC = () => {
             .reverse()
             .map((post, index) => (
               <div key={post.sys.id} className='h-96'>
-                <PostCard
-                  title={post.fields.title}
-                  image={post.fields.image}
-                  tags={post.fields.tags}
-                />
+                <PostCard post={post.fields} />
               </div>
             ))}
       </div>

@@ -35,8 +35,8 @@ const LatestProjects: React.FC = () => {
   };
 
   return (
-    <div className='latest-projects'>
-      <div className='flex justify-between mb-5'>
+    <section className='latest-projects'>
+      <div className=' section-header flex justify-between mb-5'>
         <h1 className='text-4xl mt-2'>Latest Projects</h1>
         <Button
           variant='outlined'
@@ -46,7 +46,7 @@ const LatestProjects: React.FC = () => {
           See all <span className='hidden md:inline ml-2'> Projects</span>
         </Button>
       </div>
-      <div className='mb-10 w-full h-96'>
+      <div className='mb-10 w-full h-60'>
         <ProjectCard key={projects[0].sys.id} project={projects[0].fields} />
       </div>
       <div className='grid grid-cols-1 md:grid-cols-2  gap-8'>
@@ -64,7 +64,7 @@ const LatestProjects: React.FC = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
