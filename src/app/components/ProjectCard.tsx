@@ -1,6 +1,7 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface Project {
   title: string;
@@ -22,11 +23,10 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
 
   return (
     <div className='shadow-mdx rounded-lg overflow-hidden w-full h-60'>
-      <a
+      <Link
         href={`/projects/${slug}`}
-        target='_blank'
-        rel='noopener noreferrer'
-        className='inline-block no-underline w-full h-full'
+        passHref
+        className='inline-block text-inherit no-underline w-full h-full'
       >
         {imageCover && (
           <div className='relative h-full'>
@@ -43,7 +43,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
             </h2>
           </div>
         )}
-      </a>
+      </Link>
     </div>
   );
 };

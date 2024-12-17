@@ -20,7 +20,7 @@ const LatestBlog: React.FC = ({}) => {
   const firstPost = posts.at(0) ?? posts.at(0);
 
   return (
-    <section className='latest-blog my-10 h-[850px] md:h-[500px]'>
+    <section className='latest-blog my-10 h-[850px] md:h-[550px]'>
       <div className='section-header flex justify-between mb-5'>
         <h1 className='text-4xl '>Latest Posts</h1>
         <Button
@@ -30,7 +30,7 @@ const LatestBlog: React.FC = ({}) => {
           See all <span className='hidden md:inline ml-2'> Posts</span>
         </Button>
       </div>
-      <div className='flex flex-col md:grid  md:grid-cols-2  md:h-80 gap-5'>
+      <div className='flex flex-col md:grid  md:grid-cols-2  md:h-96 gap-5'>
         <div className='md:col-span-1'>
           {firstPost ? (
             <div className='w-full h-full'>

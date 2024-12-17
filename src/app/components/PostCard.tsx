@@ -12,50 +12,24 @@ interface Post {
 
 interface PostProps {
   post: Post;
-  isHorizontal?: boolean;
 }
 
-const PostCard: React.FC<PostProps> = ({ post, isHorizontal = false }) => {
+const PostCard: React.FC<PostProps> = ({ post }) => {
   const { title, image, tags, slug } = post;
-  console.log(`image url: ${image.fields.file.url}`);
-  // if (isHorizontal) {
-  //   return (
-  //     <Link
-  //       href={`/blog/${slug}`}
-  //       passHref
-  //       className='no-underline text-inherit h-full w-full flex flex-col'
-  //     >
-  //       <div className='relative w-full h-4/5 rounded-lg  '>
-  //         <Image
-  //           src={`https:${image.fields.file.url}`}
-  //           alt={title}
-  //           fill
-  //           className='rounded-lg object-cover'
-  //           sizes='(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw'
-  //         />
-  //       </div>
-  //       <div className='description pt-4 lg:pt-1'>
-  //         <p className='text-primary  font-bold'>
-  //           {tags ? tags.toUpperCase() : ''}
-  //         </p>
-  //         <h1 className='text-2xl pt-2'>{title}</h1>
-  //       </div>
-  //     </Link>
-  //   );
-  // } else {
+
   return (
     <Link
       href={`/blog/${slug}`}
       passHref
-      className='no-underline text-inherit w-full min-h-36 h-4/6'
+      className='no-underline text-inherit w-full min-h-60 md:min-h-40 h-full'
     >
       {image && (
-        <div className='relative rounded-lg min-h-36'>
+        <div className='relative rounded-lg min-h-60 md:min-h-40 h-full'>
           <Image
             src={`https:${image.fields.file.url}`}
             alt={image.fields.title}
             fill
-            className='rounded-lg object-cover min-h-36 h-full'
+            className='rounded-lg object-cover min-h-60 md:min-h-40 h-full'
             sizes='(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw'
           />
         </div>
