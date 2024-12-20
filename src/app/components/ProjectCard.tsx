@@ -22,7 +22,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   const { title, slug, imageCover } = project;
 
   return (
-    <div className='shadow-mdx rounded-lg overflow-hidden w-full h-60'>
+    <div className='shadow-mdx rounded-lg overflow-hidden w-full h-96'>
       <Link
         href={`/projects/${slug}`}
         passHref

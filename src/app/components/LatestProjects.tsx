@@ -39,17 +39,17 @@ const LatestProjects: React.FC = () => {
 
   return (
     <section className='latest-projects'>
-      <div className='section-header flex justify-between mb-5'>
+      <div className='section-header flex justify-between align-middle mb-5'>
         <h1 className='text-4xl mt-2'>Latest Projects</h1>
         <Button
           variant='outlined'
-          className='py-3 px-6 font-bold 2xl:text-xl rounded-3xl'
+          className='py-3 px-6 font-bold 2xl:text-xl rounded-3xl whitespace-nowrap h-12'
           onClick={goToProjectsPage}
         >
           See all <span className='hidden md:inline ml-2'> Projects</span>
         </Button>
       </div>
-      <div className='mb-10 w-full h-60'>
+      <div className='mb-10 w-full h-96'>
         <ProjectCard key={projects[0].sys.id} project={projects[0].fields} />
       </div>
       <div className='grid grid-cols-1 md:grid-cols-2  gap-8'>

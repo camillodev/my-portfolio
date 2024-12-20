@@ -21,15 +21,15 @@ const PostCard: React.FC<PostProps> = ({ post }) => {
     <Link
       href={`/blog/${slug}`}
       passHref
-      className='no-underline text-inherit w-full min-h-60 md:min-h-40 h-full'
+      className='no-underline text-inherit w-full min-h-60 md:min-h-72 h-full'
     >
       {image && (
-        <div className='relative rounded-lg min-h-60 md:min-h-40 h-full'>
+        <div className='relative rounded-lg min-h-60 md:min-h-72 h-full'>
           <Image
             src={`https:${image.fields.file.url}`}
             alt={image.fields.title}
             fill
-            className='rounded-lg object-cover min-h-60 md:min-h-40 h-full'
+            className='rounded-lg object-cover min-h-60 md:min-h-72 h-full'
             sizes='(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw'
           />
         </div>

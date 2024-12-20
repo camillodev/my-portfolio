@@ -25,7 +25,7 @@ const LatestBlog: React.FC = ({}) => {
   };
 
   return (
-    <section className='latest-blog my-10 h-[850px] md:h-[550px]'>
+    <section className='latest-blog my-10 h-[1150px] md:h-[850px]'>
       <div className='section-header flex justify-between mb-5'>
         <h1 className='text-4xl '>Latest Posts</h1>
         <Button
@@ -36,7 +36,7 @@ const LatestBlog: React.FC = ({}) => {
           See all <span className='hidden md:inline ml-2'> Posts</span>
         </Button>
       </div>
-      <div className='flex flex-col md:grid  md:grid-cols-2  md:h-96 gap-5'>
+      <div className='flex flex-col md:grid  md:grid-cols-2 md:h-[650px] gap-5'>
         <div className='md:col-span-1'>
           {firstPost ? (
             <div className='w-full h-full'>
@@ -47,7 +47,7 @@ const LatestBlog: React.FC = ({}) => {
           )}
         </div>
         <div className='md:col-span-1'>
-          <div className='md:h-40'>
+          <div className='md:h-60'>
             {posts.slice(1, 3).map((post, index) => (
               <div className='mb-5 md:col-span-1' key={post.sys.id}>
                 <PostCard post={post.fields} />

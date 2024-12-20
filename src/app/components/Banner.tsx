@@ -45,9 +45,9 @@ const Banner: React.FC = ({}) => {
               src='/pic.svg'
               alt='Rafael Camillo smilling'
               width={400}
-              height={300}
+              height={500}
               className='object-cover w-full h-full'
-              sizes='(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw'
+              // sizes='(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw'
             />
           </div>
         </div>
