@@ -1,7 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import { client } from '../utils/contentful';
-import ProjectCard from '../components/ProjectCard';
 import PostCard from '../components/PostCard';
 
 const Blog: React.FC = () => {
@@ -29,11 +28,11 @@ const Blog: React.FC = () => {
     return <div>Loading...</div>;
   }
   return (
-    <div className='container mx-auto px-10 pt-10'>
-      <div className='flex flex-col mb-10 w-full h-96 md:max-h-[540px] '>
+    <div className='container mx-auto px-10 py-14'>
+      <div className='flex flex-col mb-24 w-full h-96 md:h-[550px] '>
         <PostCard post={posts[0].fields} />
       </div>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-24 gap-x-10'>
         {posts.length > 1 &&
           posts
             .slice(1)
